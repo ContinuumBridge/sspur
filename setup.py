@@ -7,11 +7,9 @@ setup(name='snappy-spur',
       py_modules=['spur'],
       install_requires=[
           'Twisted',
-          'httplib2',
           'pysftp',
           'procname',
           'requests',
-          'flask-peewee',
           'pexpect',
           'pyserial'
       ],
