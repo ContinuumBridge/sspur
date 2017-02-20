@@ -19,7 +19,7 @@ setup(name='snappy-spur',
       ],
       entry_points={
           'console_scripts': [
-              'snappy-spur = bridge/scripts/snappy-cbridge:main'
+              'snappy-spur=snappy-cbridge:main'
            ]
       },
       )
