@@ -5,8 +5,11 @@
 # Proprietary and confidential
 # Written by Peter Claydon
 #
+import cbsupervisor
+
 def main():
     print("Snappy Spur Starting")
+    cbsupervisor()
 
 if __name__ == '__main__':
     main()

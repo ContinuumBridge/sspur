@@ -10,7 +10,7 @@ confinement: devmode # use 'strict' once you have the right plugs and slots
 
 apps:
   snappy-spur:
-    command: bin/snappy_cbridge
+    command: bin/spur
   conduit:
     command: node
 
