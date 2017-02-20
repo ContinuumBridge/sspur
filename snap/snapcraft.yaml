@@ -19,6 +19,6 @@ parts:
     plugin: python
     python-version: 'python2'
     source: https://github.com/ContinuumBridge/snappy-spur.git
-    source-tag: v0.1.1
+    source-tag: v0.1.2
   conduit:
     plugin: nodejs

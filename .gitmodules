@@ -4,3 +4,6 @@
 [submodule "apps_dev/spur_app"]
 	path = apps_dev/spur_app
 	url = https://github.com/ContinuumBridge/spur_app.git
+[submodule "adaptors_dev/lprs_adaptor"]
+	path = adaptors_dev/lprs_adaptor
+	url = https://github.com/ContinuumBridge/lprs_adaptor.git
