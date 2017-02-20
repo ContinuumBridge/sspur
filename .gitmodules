@@ -1,3 +1,6 @@
 [submodule "bridge"]
 	path = bridge
 	url = https://github.com/ContinuumBridge/bridge.git
+[submodule "apps_dev/spur_app"]
+	path = apps_dev/spur_app
+	url = https://github.com/ContinuumBridge/spur_app.git
