@@ -4,7 +4,7 @@ setup(name='snappy-spur',
       version='0.1.2',
       author='Peter Claydon',
       author_email='peter.claydon@continuumbridge.com',
-      py_modules=['snappy-spur'],
+      py_modules=['spur'],
       install_requires=[
           'Twisted',
           'httplib2',
@@ -19,7 +19,7 @@ setup(name='snappy-spur',
       ],
       entry_points={
           'console_scripts': [
-              'snappy-spur=snappy-cbridge:main'
+              'spur=spur:main'
            ]
       },
       )
