@@ -18,8 +18,7 @@ parts:
   snappy-spur:
     plugin: python
     python-version: 'python2'
-    source: https://github.com/ContinuumBridge/cbridge.git
-    source-tag: s0.1.0
-    source-branch: snappy
+    source: https://github.com/ContinuumBridge/snappy-spur.git
+    source-tag: v0.1.1
   conduit:
     plugin: nodejs
