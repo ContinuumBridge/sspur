@@ -27,5 +27,4 @@ parts:
     plugin: nodejs
   start:
     plugin: dump
-    source: https://github.com/ContinuumBridge/snappy-spur.git
-
+    source: .

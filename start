@@ -1,4 +1,5 @@
 #!/bin/sh
+export CB_SNAPPY_DIR=$SNAP_DATA
 export CB_DJANGO_CONTROLLER_ADDR="portal.continuumbridge.com"
 export CB_NODE_CONTROLLER_ADDR="portal.continuumbridge.com"
 export CB_DROPBOX_TOKEN="Dzl1HqI0MDEAAAAAAAAAAdR67r0pNVDNIYupKDiJ3Im7punvoqFXf5IAjqEMQ80e"
@@ -15,4 +16,5 @@ export CB_DEV_ADAPTORS="LPRS Adaptor, Everspring 1 13, Aeon Labs 98 3, Z-Wave.Me
 export CB_USERNAME="bridge"
 export CB_ZWAVE_PASSWORD="t00f@r"
 export CB_RASPBERRY='False'
-cbridge
+echo $CB_SNAPPY_DIR
+./spur.py

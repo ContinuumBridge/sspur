@@ -9,7 +9,7 @@ import subprocess
 
 def main():
     print("Snappy Spur Starting")
-    from bridge.manager import cbsupervisor
+    import bridge.manager.cbsupervisor
 
 if __name__ == '__main__':
     main()
