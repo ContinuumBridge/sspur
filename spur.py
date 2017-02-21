@@ -5,11 +5,11 @@
 # Proprietary and confidential
 # Written by Peter Claydon
 #
-import cbsupervisor
+import subprocess
 
 def main():
     print("Snappy Spur Starting")
-    cbsupervisor()
+    from bridge.manager import cbsupervisor
 
 if __name__ == '__main__':
     main()

@@ -1,0 +1,18 @@
+#!/bin/sh
+export CB_DJANGO_CONTROLLER_ADDR="portal.continuumbridge.com"
+export CB_NODE_CONTROLLER_ADDR="portal.continuumbridge.com"
+export CB_DROPBOX_TOKEN="Dzl1HqI0MDEAAAAAAAAAAdR67r0pNVDNIYupKDiJ3Im7punvoqFXf5IAjqEMQ80e"
+export CB_BRIDGE_KEY='434f3139LkQc/uTaYWA6LmiOmcJfu+FtQmdIdfMoroOctEKDxWR9/i+7BHJLx3px'
+export CB_BRIDGE_URI='/api/bridge/v1/bridge/273'
+export CB_BRIDGE_NAME=''
+export CB_BID='BID273'
+export CB_SFTP_PASSWORD="DTfC,3[!7kB[AfxB"
+export CB_PERIPHERALS='LPRS Adaptor'
+export CB_LOG_ENVIRONMENT="DEBUG"
+export CB_DEV_BRIDGE=True
+export CB_DEV_APPS="Spur App, Adaptor Test App, Light Controller"
+export CB_DEV_ADAPTORS="LPRS Adaptor, Everspring 1 13, Aeon Labs 98 3, Z-Wave.Me 1 256"
+export CB_USERNAME="bridge"
+export CB_ZWAVE_PASSWORD="t00f@r"
+export CB_RASPBERRY='False'
+cbridge

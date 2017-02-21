@@ -13,6 +13,8 @@ apps:
     command: bin/spur
   conduit:
     command: node
+  start:
+    command: start
 
 parts:
   snappy-spur:
@@ -23,3 +25,7 @@ parts:
     source-branch: master
   conduit:
     plugin: nodejs
+  start:
+    plugin: dump
+    source: https://github.com/ContinuumBridge/snappy-spur.git
+
