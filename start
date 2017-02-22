@@ -17,4 +17,4 @@ export CB_USERNAME="bridge"
 export CB_ZWAVE_PASSWORD="t00f@r"
 export CB_RASPBERRY='False'
 echo $CB_SNAPPY_DIR
-./spur.py
+snappy_spur
