@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from distutils.core import setup
 setup(name='sspur',
-      version='0.1.12',
+      version='0.1.13',
       author='Peter Claydon',
       author_email='peter.claydon@continuumbridge.com',
       py_modules=['sspur'],
