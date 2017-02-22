@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from distutils.core import setup
 setup(name='sspur',
-      version='0.1.8',
+      version='0.1.9',
       author='Peter Claydon',
       author_email='peter.claydon@continuumbridge.com',
       packages=['bridge', 'apps_dev', 'adaptors_dev'],
