@@ -10,7 +10,7 @@ from bridge.manager.cbsupervisor_a import Supervisor
 
 def main():
     print("Snappy Spur Starting")
-    print("This is sspur.py")
+    print("This is sspur.py from the top directory")
     Supervisor()
 
 if __name__ == '__main__':
