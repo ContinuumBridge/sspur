@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 from distutils.core import setup
-setup(name='spur',
-      version='0.1.4',
+setup(name='sspur',
+      version='0.1.5',
       author='Peter Claydon',
       author_email='peter.claydon@continuumbridge.com',
-      py_modules=['spur'],
+      py_modules=['sspur'],
       install_requires=[
           'Twisted',
           'pysftp',
@@ -15,7 +15,7 @@ setup(name='spur',
       ],
       entry_points={
           'console_scripts': [
-              'spur = spur:main'
+              'sspur = sspur:main'
            ]
       },
       )
