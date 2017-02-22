@@ -6,11 +6,12 @@
 # Written by Peter Claydon
 #
 import subprocess
+from bridge.manager.cbsupervisor_a import Supervisor
 
 def main():
     print("Snappy Spur Starting")
     print("This is sspur.py")
-    import bridge.manager.cbsupervisor
+    Supervisor()
 
 if __name__ == '__main__':
     main()
