@@ -5,11 +5,10 @@
 # Proprietary and confidential
 # Written by Peter Claydon
 #
-import subprocess
 
 def main():
     print("Snappy Spur Starting")
-    print("This is snappy-spur.py, not snappy-spur")
+    print("This is snappy-spur, not snappy-spur.py")
     import bridge.manager.cbsupervisor
 
 if __name__ == '__main__':
