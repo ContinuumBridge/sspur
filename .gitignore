@@ -56,4 +56,3 @@ nosetests.xml
 
 prime/*
 stage/*
-snappy-spur*
