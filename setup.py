@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 from distutils.core import setup
-setup(name='snappy-spur',
-      version='0.1.3',
+setup(name='spur',
+      version='0.1.4',
       author='Peter Claydon',
       author_email='peter.claydon@continuumbridge.com',
-      py_modules=['snappy-spur'],
+      py_modules=['spur'],
       install_requires=[
           'Twisted',
           'pysftp',
@@ -15,7 +15,7 @@ setup(name='snappy-spur',
       ],
       entry_points={
           'console_scripts': [
-              'snappy-spur=snappy-spur:main'
+              'spur = spur:main'
            ]
       },
       )
