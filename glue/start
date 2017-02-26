@@ -1,7 +1,7 @@
 #!/bin/bash
 echo 'Setting environment variables'
-CB_THISBRIDGE=${SNAP_USER_DATA::-3}'common/thisbridge/thisbridge.sh'
-echo "CB_THISBRIDGE="$CB_THISBRIDGE
+CB_THISBRIDGE=$SNAP/thisbridge.sh
+echo "CB_THISBRIDGE=$CB_THISBRIDGE"
 export CB_SNAPPY_DIR=$SNAP_DATA
 source $CB_THISBRIDGE
-/snap/sspur/current/bbridge/bridge/manager/cbsupervisor.py
+$SNAP/bbridge/bridge/manager/cbsupervisor.py
