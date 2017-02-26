@@ -30,7 +30,7 @@ parts:
   conduit:
     plugin: nodejs
     source: nodejs
-    node-packages: [ continuumbridge, ]
+    node-packages: [ backoff, continuumbridge, cookie, getenv, restler, socket.io-client, underscore, winston ]
   glue:
     plugin: dump
     source: glue
