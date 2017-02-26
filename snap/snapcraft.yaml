@@ -30,6 +30,7 @@ parts:
   conduit:
     plugin: nodejs
     source: nodejs
+    node-packages: [ continuumbridge, ]
   glue:
     plugin: dump
     source: glue
