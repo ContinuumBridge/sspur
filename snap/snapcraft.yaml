@@ -25,9 +25,9 @@ parts:
     source-branch: master
   conduit:
     plugin: nodejs
-  start:
+  glue:
     plugin: dump
-    source: .
+    source: glue
   bbridge:
     plugin: dump
     source: ./bbridge
