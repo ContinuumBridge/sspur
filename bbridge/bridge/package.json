@@ -1,0 +1,33 @@
+{
+  "author": "Mark Claydon",
+  "name": "bridge",
+  "description": "Continuum Bridge bridge node js",
+  "version": "0.0.0",
+  "homepage": "http://www.continuumbridge.com/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ContinuumBridge/bridge.git"
+  },
+  "dependencies": {
+    "backoff": "^2.4.0",
+    "continuumbridge": "^0.0.7",
+    "cookie": "^0.1.2",
+    "getenv": "^0.3.0",
+    "restler": "~2.0.1",
+    "socket.io-client": "~0.9.16",
+    "underscore": "~1.7.0",
+    "winston": "~0.7.2"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "readmeFilename": "README.md",
+  "gitHead": "e116f2d75fb3aff9a80344507865c1b0e9e29f50",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "BSD"
+}

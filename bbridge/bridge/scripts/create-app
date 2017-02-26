@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Create an lxc with the given app inside it.
+
+usage()
+{
+    cat <<EOF
+$1 -h|--help app-name app-path
+EOF
+    return 0
+}
+
+# Must be run as root
+if [ "$(id -u)" != "0" ]; then
+    echo "This script should be run as 'root'"
+    exit 1
+fi
+
+options=$(getopt -o h -l help -- "$@")
+if [ $? -ne 0 ]; then
+        usage "$(basename $0)"
+        exit 1
+fi
+eval set -- "$options"
+
+while true
+do
+    case "$1" in
+        -h|--help)      usage $0 && exit 0;;
+        --)             shift 1; break ;;
+        *)              break ;;
+    esac
+done
+
+if [ $# -ne 2 ]; then
+    usage "$(basename $0)"
+    exit 1
+fi
+
+app_name=$1; shift 1
+app_path=$1; shift 1
+lxc-destroy -n $app_name
+lxc-create -n $app_name -f lxc-scripts/app.conf -t cb -- -A $app_path

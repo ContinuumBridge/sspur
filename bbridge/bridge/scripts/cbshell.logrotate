@@ -1,0 +1,9 @@
+/var/log/cbshell.log {
+        daily
+        size=2M
+        rotate 2
+        compress
+        nodelaycompress
+        missingok
+        notifempty
+}

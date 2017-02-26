@@ -1,0 +1,11 @@
+{
+    "exe": "adaptor.py", 
+    "protocol": "peripheral", 
+    "name": "LPRS Adaptor", 
+    "device_resource": "/api/bridge/v1/device/61", 
+    "url": "https://github.com/ContinuumBridge/lprs_adaptor/archive/v1.2.1.tar.gz", 
+    "version": "1.2.1", 
+    "provider": "ContinuumBridge", 
+    "adaptor_resource": "/api/bridge/v1/adaptor/24", 
+    "description": "Implements ContinuumBridge protocol"
+}

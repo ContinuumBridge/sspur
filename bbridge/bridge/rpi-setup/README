@@ -1,0 +1,119 @@
+Starting from a standard Raspbian installation. (2013-02-09-wheezy-raspbian used
+in this work)
+
+Add the packages:
+sudo apt-get install -y lxc
+sudo apt-get install -y busybox-static
+sudo apt-get install -y swig
+
+For running the aggregator:
+sudo apt-get install -y nodejs
+sudo apt-get install -y nodejs-legacy
+
+For running python with swig (and cmake)
+sudo apt-get install -y python-dev
+pexpect needed for the SensorTag
+sudo apt-get install -y python-pexpect
+
+For BTLE (this doesn't work on RPi so has to be built from
+source. Used 5.4 from http://www.bluez.org/. Need to install
+libglib2.0-dev libdbus-1-dev libusb-dev libudev-dev libical-dev
+systemd libreadline-dev)
+sudo apt-get install -y bluez
+
+For building:
+sudo apt-get install -y cmake
+
+For testing:
+sudo apt-get install -y screen
+
+Use lxc-checkconfig to check that the system is setup correctly.
+
+Set up control group filesystem:
+mkdir /cgroup
+
+Add this entry to /etc/fstab
+none /cgroup cgroup defaults 0 0
+
+Things must be run as root.
+
+Copy the template lxc-cb to /usr/share/lxc/templates/
+
+Make the directory /lxc to store sockets
+
+The app is started in an lxc that is run using screen so it can be attached to.
+Remember it's run by root.
+
+Testing can be done using the script
+concentrator/manager.sh "full pathname of the continuum-bridge-proto1 directory"
+
+IMPORTANT: manager.sh assumes that testing is done by making a build directory
+underneath the top level of the repository and running "cmake .." from there.
+
+Single machine testing
+----------------------
+
+The command "single" sets up the following (on a single machine):
+
+device -> device channel -> app -> aggregator channel -> aggregator
+
+The app, called base, runs inside the lxc and generates values and sends them to the socket.
+
+The channels both use setupChannel, connecting the app to "outside" things.
+
+The output is somewhat confusing as all of the printing is done to the
+one console.
+
+The aggregator simply prints out the data it receives.
+
+To stop the command press "q", this will tidy all of the processes
+that have been created.
+
+Multiple machine testing
+------------------------
+
+Using concentrator/manager.sh
+
+Start aggregator on machine (e.g. ip address 192.168.16.174)
+
+startaggregator
+
+On another machine start the server
+
+sethost 192.168.16.174
+startserver
+startapp
+
+To stop the command press "q", this will tidy all of the processes
+that have been created.
+
+Triple machine testing
+----------------------
+
+sulis <- bridge-host <- bridge-device
+
+Run the aggregator on sulis, device on bridge-device, the rest on bridge-host
+
+sulis:
+concentrator/manager.sh
+  startaggregator
+
+bridge-device:
+concentrator/manager.sh
+  startdevice
+
+bridge-host:
+concentrator/manager.sh
+  triple
+
+Note that if you want to use different IP addresses then either edit manager.sh
+or use setaggregatorhost/setdevicehost.
+
+To stop the command press "q", this will tidy all of the processes
+that have been created.
+
+Things to do
+------------
+
+At the moment channels make assumptions about direction/data etc. probably need
+a protocol. What to choose?

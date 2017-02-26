@@ -1,0 +1,43 @@
+To connect to access point
+--------------------------
+
+Put interfaces file in /etc/network/interfaces
+Put wpa_supplicant.conf in /etc/wpa_supplicant/wpa_supplicant.conf
+
+To make RPI into an access point
+--------------------------------
+
+http://www.rpiblog.com/2012/12/turn-raspberry-pi-into-wireless-access.html
+http://blog.sip2serve.com/post/38010690418/raspberry-pi-access-point-using-rtl8192cu
+http://www.pi-point.co.uk/documentation/
+
+apt-get install hostapd
+apt-get install bridge-utils
+
+Put interfaces.hostapd or interfaces.bridge in /etc/network/interfaces
+Put hostapd.conf.open or hostapd.conf.secure, as required, in
+/etc/hostapd/hostapd.conf
+
+Uncomment the line in /etc/default/hostapd DAEMON_CONF="" and change to
+
+DAEMON_CONF="/etc/hostapd/hostapd.conf"
+
+To install those changes:
+service hostapd restart
+
+If DHCP server is required then add this:
+apt-get install dnsmasq
+
+Set these lines in /etc/dnsmasq.conf to allow DHCP to work
+
+# Never forward plain names (without a dot or domain part)
+domain-needed
+
+# Only listen for DHCP on wlan0
+interface=wlan0
+
+# Create a dhcp range on your wlan0 network with 12 hour lease time
+dhcp-range=192.168.1.5,192.168.1.254,255.255.255.0,12h
+
+To install those changes:
+service dnsmasq restart
