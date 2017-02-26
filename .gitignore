@@ -1,5 +1,3 @@
-node_modules/
-aggregator/node-modules
 build
 bridge/manager/*.db
 bridge/manager/*.config
