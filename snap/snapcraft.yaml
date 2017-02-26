@@ -20,16 +20,10 @@ parts:
   sspur:
     plugin: python
     python-version: 'python2'
-    source: https://github.com/ContinuumBridge/sspur.git
-    #source-tag: v0.1.6
-    source-branch: master
+    source: bbridge
   conduit:
     plugin: nodejs
+    source: nodejs
   glue:
     plugin: dump
     source: glue
-  bbridge:
-    plugin: dump
-    source: ./bbridge
-    filesets:
-      all: bbridge
