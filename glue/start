@@ -4,4 +4,5 @@ CB_THISBRIDGE=$SNAP/thisbridge.sh
 echo "CB_THISBRIDGE=$CB_THISBRIDGE"
 export CB_SNAPPY_DIR=$SNAP_DATA/
 source $CB_THISBRIDGE
+export NODE_PATH=$NODE_PATH:$SNAP/lib/node_modules
 $SNAP/bbridge/bridge/manager/cbsupervisor.py
