@@ -1,0 +1,17 @@
+#!/bin/bash
+echo 'Setting environment variables'
+CB_THISBRIDGE=$SNAP/thisbridge.sh
+echo "CB_THISBRIDGE=$CB_THISBRIDGE"
+export CB_SNAPPY_DIR=$SNAP_DATA/
+source $CB_THISBRIDGE
+export NODE_PATH=$NODE_PATH:$SNAP/lib/node_modules
+
+export PYTHONPATH=$PYTHONPATH:$SNAP/bbridge/bridge/lib
+
+config=$SNAP_DATA/thisbridge/bridge.config
+mkdir -p `dirname $config`
+if ! [ -e $config ]; then
+    cp $SNAP/bridge.config $config
+fi
+
+$SNAP/bbridge/bridge/manager/cbsupervisor.py
